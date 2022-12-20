@@ -32,6 +32,24 @@ def create_car() -> Car:
     return new_car
 
 
+# Function to delete user specified car object from car array
+def delete_car(array: Car):
+    if len(array) == 0:
+        print('*List empty: No cars to display*')
+        print('*Please create/add cars to list*')
+    else:
+        print("\nPlease enter the corresponding number for the car you'd like to delete.")
+        # enumerate allows cars to be list in number order using number variable
+        for number, index in enumerate(array):
+            print(number, ' - ' + index.make + ' ' + index.model)
+
+        deletion_choice = int(input())
+        # Display deleted car before removal - successful deletion from list
+        deleted_car_display_name = array[deletion_choice].make + ' ' + array[deletion_choice].model
+        del(array[deletion_choice])
+        print('\n*' + deleted_car_display_name + ' successfully removed*')
+
+
 # Initialize empty array to store car objects
 car_array: Car = []
 
@@ -54,8 +72,8 @@ while True:
 
         print('*' + car.make + ' ' + car.model + ' successfully created & added to list*')
     elif choice == '2':  # Delete car
-        # Delete Function
-        print('Delete Car')
+        # Delete car function call
+        delete_car(car_array)
 
     elif choice == '3':  # Edit car
         # Edit Function
