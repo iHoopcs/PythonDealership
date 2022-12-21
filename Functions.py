@@ -98,3 +98,13 @@ def edit_car(array: Car):
 
     print('*Updated Car Features*\n')
     print(array[edit_choice].to_string() + '\n')
+
+
+# Function to save car objects & features to file
+def save_car(array: Car):
+    car_file = open('Cars.txt', 'a')
+
+    for i in array:
+        # Call car class function on car object -> print details & write to Cars.txt
+        car_file.write(i.save())
+        print('\n*Cars & features saved*')
