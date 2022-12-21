@@ -1,6 +1,6 @@
 import sys
 from Car import Car
-from Functions import create_car, delete_car, edit_car, display_cars
+from Functions import create_car, delete_car, edit_car, display_cars, save_car
 
 # Initialize empty array to store car objects
 car_array: Car = []
@@ -37,6 +37,12 @@ while True:
 
     elif choice == '5':  # Save & Exit
         # Save Function
+        if len(car_array) == 0:
+            print('*List empty: No cars saved*')
+
+        else:
+            save_car(car_array)
+
         print('Thank you! Goodbye!')
         sys.exit()
 

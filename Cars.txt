@@ -1,0 +1,6 @@
+Honda | Accord | 2 | Red | 2020
+Ferrari | Superfast | 2 | Blue | 2023
+BMW | i8 | 2 | Silver | 2022
+Acura | MDX | 4 | Black | 2020
+Honda | Pilot | 4 | Cyan | 2022
+Buggati | Legend | 2 | Orange | 2023
