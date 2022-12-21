@@ -1,6 +1,6 @@
 import sys
 from Car import Car
-from Functions import create_car, delete_car, edit_car, display_cars, save_car
+from Functions import create_car, delete_car, edit_car, display_cars, save_car,view_car
 
 # Initialize empty array to store car objects
 car_array: Car = []
@@ -33,6 +33,7 @@ while True:
         # Display Function
         print('\nLoading available cars...')
         display_cars(car_array)
+        view_car(car_array)
         print(' ')
 
     elif choice == '5':  # Save & Exit
