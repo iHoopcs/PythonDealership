@@ -1,6 +1,6 @@
 import sys
 from Car import Car
-from Functions import create_car, delete_car, edit_car, display_cars, save_car
+from Functions import create_car, delete_car, edit_car, display_cars, save_car, view_car
 
 # Initialize empty array to store car objects
 car_array: Car = []
@@ -33,20 +33,20 @@ while True:
         # Display Function
         print('\nLoading available cars...')
         display_cars(car_array)
-        print(' ')
+        # Condition section skips view_car() if there are no cars to display
+        if len(car_array) == 0:
+            print(' ')
+        else:
+            view_car(car_array)
+            print(' ')
 
     elif choice == '5':  # Save & Exit
         # Save Function
         if len(car_array) == 0:
-            print('*List empty: No cars saved*')
+            print('\n*List empty: No cars saved*')
 
         else:
             save_car(car_array)
 
         print('Thank you! Goodbye!')
         sys.exit()
-
-
-
-
-
