@@ -5,3 +5,5 @@ Acura | MDX | 4 | Black | 2020
 Honda | Pilot | 4 | Cyan | 2022
 Buggati | Legend | 2 | Orange | 2023
 Honda | CRV | 4 | Magenta | 2002
+Honda | Pilot | 4 | Black | 2020
+Ford | F150 | 4 | Blue | 2021

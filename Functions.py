@@ -53,13 +53,13 @@ def delete_car(array: Car):
 
 # Function to edit features of user specified car object
 def edit_car(array: Car):
-    print("\nPlease enter the corresponding number to which car you'd like to edit, enter a dash to go back.")
+    print("\nPlease enter the corresponding number for which car you'd like to edit, enter a dash to go back.")
     display_cars(array)
     edit_choice = input()
 
     if edit_choice == '-':
         pass
-        print('\n')
+        print(' ')
     else:
         # Cast str -> int to use in array index call
         edit_choice = int(edit_choice)
@@ -115,7 +115,7 @@ def edit_car(array: Car):
 
 # Function to further inspect car features based on user selection - function call after display_cars() - menu option 4
 def view_car(array: Car):
-    print('Please select a car to further inspect, enter a dash to go back.')
+    print("Please enter the corresponding number for which car you'd like to further inspect, enter a dash to go back.")
     inspect_choice = input()
 
     if inspect_choice != '-':
