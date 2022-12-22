@@ -1,9 +1,8 @@
-Honda | Accord | 2 | Red | 2020
-Ferrari | Superfast | 2 | Blue | 2023
-BMW | i8 | 2 | Silver | 2022
-Acura | MDX | 4 | Black | 2020
-Honda | Pilot | 4 | Cyan | 2022
-Buggati | Legend | 2 | Orange | 2023
-Honda | CRV | 4 | Magenta | 2002
-Honda | Pilot | 4 | Black | 2020
-Ford | F150 | 4 | Blue | 2021
+Honda | Civic | 4 | Red | 2020
+
+Acura | MDX | 4 | Black | 2022
+
+BMW | i8 | 4 | Black | 2023
+
+Toyota | Rav4 | 4 | Black | 2023
+

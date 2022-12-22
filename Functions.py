@@ -1,4 +1,5 @@
 # Class holding functions accessible by main.py
+
 from Car import Car
 
 
@@ -130,9 +131,52 @@ def view_car(array: Car):
 
 # Function to save car objects & features to file
 def save_car(array: Car):
-    car_file = open('Cars.txt', 'a')
+    car_file = open('Cars.txt', 'w')
 
     for i in array:
-        # Call car class function on car object -> print details & write to Cars.txt
         car_file.write(i.save())
-        print('\n*Cars & features saved*')
+    print('\n*Cars & features saved*')
+
+
+# Function to read Cars.txt -> take information and import car objects w/ features into program
+def load_cars():
+    # Create array to store car objects w/ features from file
+    file_cars = []
+
+    car_file = open('Cars.txt', 'r')
+
+    # Initialize array to store lines of car info
+    file_content = []
+    file_content = car_file.readlines()
+
+    for i in file_content:
+        # If the line read is blank - skip
+        if i == '\n':
+            pass
+        else:
+            # each line set to variable
+            content_line = i
+
+            # Array to store each car's features
+            car_features = []
+            car_features = content_line.split(' | ')
+
+            # Retrieve/Assign features
+            file_make = car_features[0]
+            file_model = car_features[1]
+            file_num_doors = car_features[2]
+            file_color = car_features[3]
+            file_year = car_features[4]
+
+            # Create car object -> add to array
+            car = Car(
+                file_make,
+                file_model,
+                file_num_doors,
+                file_color,
+                file_year
+            )
+
+            file_cars.append(car)
+
+    return file_cars
