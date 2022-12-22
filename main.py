@@ -1,9 +1,11 @@
 import sys
 from Car import Car
-from Functions import create_car, delete_car, edit_car, display_cars, save_car, view_car
+from Functions import \
+    create_car, delete_car, edit_car, display_cars, save_car, view_car, load_cars
 
-# Initialize empty array to store car objects
-car_array: Car = []
+# Load cars into program -> assign to car_array
+car_array: Car = load_cars()
+
 print('Welcome to the Python Dealership!')
 # Main Menu
 while True:
