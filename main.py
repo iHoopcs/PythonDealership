@@ -1,7 +1,9 @@
 import sys
+import time
+
 from Car import Car
 from Functions import \
-    create_car, delete_car, edit_car, display_cars, save_car, view_car, load_cars
+    create_car, delete_car, edit_car, display_cars, save_car, view_car, load_cars, generate_car_photo
 
 # Load cars into program -> assign to car_array
 car_array: Car = load_cars()
@@ -49,6 +51,8 @@ while True:
 
         else:
             save_car(car_array)
+            # System wait 3 seconds
+            time.sleep(3)
+            generate_car_photo()
 
-        print('Thank you! Goodbye!')
         sys.exit()
