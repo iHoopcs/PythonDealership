@@ -1,4 +1,5 @@
 # Class holding functions accessible by main.py
+import webbrowser
 
 from Car import Car
 
@@ -136,6 +137,7 @@ def save_car(array: Car):
     for i in array:
         car_file.write(i.save())
     print('\n*Cars & features saved*')
+    print('Generating car photo...')
 
 
 # Function to read Cars.txt -> take information and import car objects w/ features into program
@@ -180,3 +182,22 @@ def load_cars():
             file_cars.append(car)
 
     return file_cars
+
+
+# Function to read 'Cars.txt' file -> take details and access web url -> generate photo
+def generate_car_photo():
+    file = open('Cars.txt', 'r')
+
+    file_content = file.readlines()
+
+    for i in file_content:
+        # If the line read is blank - skip
+        if i == '\n':
+            pass
+        else:
+            i = i.replace(" | ", " ")
+
+            url = i
+            webbrowser.open(url)
+
+
